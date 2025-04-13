@@ -8,6 +8,8 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+import Footer from "@/components/footer"
+import Header from "@/components/header"
 
 export const metadata: Metadata = {
   title: {
@@ -44,10 +46,11 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
+            <Header />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
+            {/* <footer className="w-full flex items-center justify-center py-3">
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
@@ -57,7 +60,8 @@ export default function RootLayout({
                 <span className="text-default-600">Powered by</span>
                 <p className="text-primary">HeroUI</p>
               </Link>
-            </footer>
+            </footer> */}
+            <Footer />
           </div>
         </Providers>
       </body>
