@@ -12,7 +12,7 @@ import "next-auth/jwt"
 // import Discord from "next-auth/providers/discord"
 // import Dropbox from "next-auth/providers/dropbox"
 // import Facebook from "next-auth/providers/facebook"
-// import GitHub from "next-auth/providers/github"
+import GitHub from "next-auth/providers/github"
 // import GitLab from "next-auth/providers/gitlab"
 import Google from "next-auth/providers/google"
 // import Hubspot from "next-auth/providers/hubspot"
@@ -68,7 +68,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     // Discord,
     // Dropbox,
     // Facebook,
-    // GitHub,
+    GitHub,
     // GitLab,
     Google,
     // Hubspot,
